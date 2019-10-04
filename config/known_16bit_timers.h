@@ -8,6 +8,20 @@
   #define TIMER1_B_PIN   4
   #define TIMER1_ICP_PIN 6
 
+#elif defined(__AVR_ATmega64P__) || defined(__AVR_ATmega64__)
+  #define TIMER1_A_PIN   13
+  #define TIMER1_B_PIN   14
+  #define TIMER1_C_PIN   15
+  #define TIMER1_ICP_PIN 22
+  #define TIMER1_CLK_PIN 24
+  #define TIMER3_A_PIN   3
+  #define TIMER3_B_PIN   4
+  #define TIMER3_C_PIN   5
+  #define TIMER3_ICP_PIN 7
+  #define TIMER3_CLK_PIN 6
+
+
+
 // Teensy 2.0
 //
 #elif defined(__AVR_ATmega32U4__) && defined(CORE_TEENSY)
@@ -39,7 +53,7 @@
   #define TIMER1_B_PIN   4
   #define TIMER1_ICP_PIN 4
 
-// Teensy 3.1 / Teensy 3.2
+// Teensy 3.1
 //
 #elif defined(__MK20DX256__)
   #define TIMER1_A_PIN   3
@@ -48,17 +62,7 @@
   #define TIMER3_A_PIN   32
   #define TIMER3_B_PIN   25
   #define TIMER3_ICP_PIN 32
-  
-// Teensy 3.5 / Teensy 3.6
-//
-#elif defined(__MK64FX512__) || defined(__MK66FX1M0__)
-  #define TIMER1_A_PIN   3
-  #define TIMER1_B_PIN   4
-  #define TIMER1_ICP_PIN 4
-  #define TIMER3_A_PIN   29
-  #define TIMER3_B_PIN   30
-  #define TIMER3_ICP_PIN 29
-  
+
 // Teensy-LC
 //
 #elif defined(__MKL26Z64__)
@@ -69,19 +73,12 @@
   #define TIMER3_B_PIN   4
   #define TIMER3_ICP_PIN 4
 
-// Teensy 4
-//
-#elif defined(__IMXRT1052__) || defined(__IMXRT1062__)
-  #define TIMER1_A_PIN   6
-  #define TIMER1_B_PIN   7
-  #define TIMER3_A_PIN   8
-  #define TIMER3_B_PIN   9
-
 // Arduino Mega
 //
 #elif defined(__AVR_ATmega1280__) || defined(__AVR_ATmega2560__)
   #define TIMER1_A_PIN   11
   #define TIMER1_B_PIN   12
+  #define TIMER1_C_PIN   13
   #define TIMER3_A_PIN   5
   #define TIMER3_B_PIN   2
   #define TIMER3_C_PIN   3
@@ -108,20 +105,12 @@
 
 //  Uno, Duemilanove, LilyPad, etc
 //
-#elif defined (__AVR_ATmega168__) || defined (__AVR_ATmega328P__) || defined (__AVR_ATmega328__) ||  defined (__AVR_ATmega8__)
+#elif defined (__AVR_ATmega168__) || defined (__AVR_ATmega328P__)
   #define TIMER1_A_PIN   9
   #define TIMER1_B_PIN   10
   #define TIMER1_ICP_PIN 8
   #define TIMER1_CLK_PIN 5
 
-  //  attiny167
-//
-#elif defined (__AVR_ATtiny167__)
-  #define TIMER1_A_PIN   14
-  #define TIMER1_B_PIN   11
-  //#define TIMER1_ICP_PIN 8
-  //#define TIMER1_CLK_PIN 5
-  
 // Sanguino
 //
 #elif defined(__AVR_ATmega644P__) || defined(__AVR_ATmega644__)
@@ -153,7 +142,7 @@
 
 // Mighty-1284 - Maniacbug
 //
-#elif defined(__AVR_ATmega1284P__) || defined(__AVR_ATmega1284__)
+#elif defined(__AVR_ATmega1284P__)
   #define TIMER1_A_PIN   12  // PD5
   #define TIMER1_B_PIN   13  // PD4
   #define TIMER1_ICP_PIN 14  // PD6
